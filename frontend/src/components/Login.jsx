@@ -2,19 +2,19 @@ import React, { useRef } from "react";
 import { Button, Container, Form } from 'react-bootstrap'
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Login({ onIdSubmit }){
+export default function Login({ onIdSubmit }) {
     const idRef = useRef();
 
-    function createNewId(){
+    function createNewId() {
         onIdSubmit(uuidv4());
     }
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
         onIdSubmit(idRef.current.value);
     }
 
-    return(
+    return (
         <Container className="align-items-center d-flex" style={{ height: "100vh" }}>
             <Form onSubmit={handleSubmit} className="w-100">
                 <Form.Group>

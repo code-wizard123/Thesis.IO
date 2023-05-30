@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+
+.outer-chat{
+    width: 50%;
+    height: calc(100vh - 100px);
+    margin: 50px;
+    border-radius: 30px;
+    padding: 20px 50px 5px 50px;
+}
+
+.shadow-box{
+    box-shadow:
+  2.6px 4.1px 3.8px -9px rgba(0, 0, 0, 0.014),
+  4.6px 7.2px 6px -9px rgba(0, 0, 0, 0.021),
+  5.9px 9.3px 7.5px -9px rgba(0, 0, 0, 0.026),
+  7px 11px 9.1px -9px rgba(0, 0, 0, 0.028),
+  8.3px 13px 12.1px -9px rgba(0, 0, 0, 0.029),
+  10px 15.7px 17.5px -9px rgba(0, 0, 0, 0.03),
+  12.2px 19.1px 26.3px -9px rgba(0, 0, 0, 0.032),
+  14.8px 23.2px 39.1px -9px rgba(0, 0, 0, 0.035),
+  17.7px 27.9px 56px -9px rgba(0, 0, 0, 0.044),
+  21px 33px 77px -9px rgba(0, 0, 0, 0.07)
+;
+}
+
+@media screen and (max-width: 899px) {
+    .outer-chat{
+        width: 100%;
+        margin: 0px;
+        height: calc(100vh - 0px);
+        border-radius: 0;
+        padding: 10px 10px 10px 10px;
+    }
+}
+
+.chats-all{
+    height: 80%;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px 15px 0 15px;
+    overflow-y: scroll;
+}
+
+.chats-all::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chats-all::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.chats-all::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 100vh;
+}
+
+
+
+.msg-input{
+    width: 90%;
+}
+
+.mentor-chat-heading{
+    height: 7%;
+}
+
+.msg-form{
+    height: 13%;
+}
+
+.msg-submit{
+    margin-left: 5px;
+    width: calc(10% - 5px);
+}
+
+.your-message{
+    align-self: flex-end;
+    border-radius: 5px 0px 5px 5px;
+}
+
+.your-message::after{
+    content: " ";
+    position: absolute;
+    right: -7px;
+    top: 0px;
+    border-bottom: none;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 7px solid lightblue;
+}
+
+.opp-message{
+    right: 0;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.opp-message::after{
+    content: " ";
+    position: absolute;
+    left: -7px;
+    top: 0px;
+    border-bottom: none;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 7px solid lightblue;
+}
+
+
+.message{
+    padding: 10px;
+    background-color: lightblue;
+    width: fit-content;
+    min-width: 10ch;
+    max-width: 20ch;
+    position: relative;
+}
