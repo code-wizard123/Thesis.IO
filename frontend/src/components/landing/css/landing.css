@@ -1,0 +1,31 @@
+.outer{
+    background-color: #eaeaea;
+    height: 100vh;
+    color: white;
+    margin: 1.5%;
+    border-radius: 30px;
+}
+
+.thesis-nav{
+    height: 170px;
+    background: url("/Images/heading.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.nav-links{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link{
+    margin-left: 7%;
+}
+
+.nav-heading{
+    margin-left: 5%;
+    font-weight: 650;
+    font-size: 40px;
+    font-family: 'Reem Kufi';
+}
