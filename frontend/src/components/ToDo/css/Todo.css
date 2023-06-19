@@ -1,0 +1,23 @@
+.buttons{
+    height: 20%;
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button{
+    width: calc(50% - 70px);
+    height: 150px; 
+    background-color: #8237CB;
+    border-radius: 20px;
+    font-family: 'Reem Kufi';
+    color: white;
+    font-size: 50px;
+    padding: 30px;
+}
+
+.list{
+    border-radius: 20px;
+    margin: 35px 45px;
+    background-color: white;
+}

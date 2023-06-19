@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .outer{
     background-color: #eaeaea;
     height: 100vh;
     color: white;
-    margin: 1.5%;
     border-radius: 30px;
 }
 
 .thesis-nav{
-    height: 170px;
-    background: url("/Images/heading.jpg");
-    /* background-repeat: no-repeat; */
+    height: 15%;
+    background: url("/Images/heading.png");
     background-size: cover;
 }
 
@@ -17,15 +18,52 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
 }
 
 .nav-link{
-    margin-left: 7%;
+    font-family: 'Lato';
+    font-size: 20px;
+}
+
+.nav-image{
+    height: 100px;
+    aspect-ratio: 1;
+    background: url('/Images/profile-img.png');
+    background-size: cover;
 }
 
 .nav-heading{
-    margin-left: 5%;
-    font-weight: 650;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.main-content{
+    color: black;
+    height: 85%;
+    display: flex;
+}
+
+.dashboard{
+    width: 20%;
+    padding: 60px 0 0 40px;
+}
+
+.center-section{
+    width: 50%;
+    background-color: #e2e2e2;
+}
+
+.chat{
+    width: 30%;
+}
+
+.dash-link{
+    margin: 50px 0 50px 0;
+}
+
+.dash-heading{
     font-family: 'Reem Kufi';
+    margin-bottom: 90px;
 }
