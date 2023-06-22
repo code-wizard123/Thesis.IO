@@ -1,23 +1,57 @@
-.buttons{
+.to-do-div{
+    height: 100%;
+}
+
+.buttons {
     height: 20%;
     padding-top: 35px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.button{
+.button {
     width: calc(50% - 70px);
-    height: 150px; 
-    background-color: #8237CB;
+    height: 100%;
+    background-color: #8237cb;
     border-radius: 20px;
-    font-family: 'Reem Kufi';
+    font-family: "Reem Kufi";
     color: white;
     font-size: 50px;
     padding: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 70ms ease-in;
 }
 
-.list{
+.list {
     border-radius: 20px;
     margin: 35px 45px;
+    margin-top: calc(20% - 150px);
     background-color: white;
+    height: calc(70%);
+}
+
+.add-task-btn::after {
+    content: url("/Images/check.png");
+    position: absolute;
+    right: -210px;
+    bottom: 70px;
+    transform: scale(25%);
+    height: 50px;
+    aspect-ratio: 1;
+}
+
+.mark-task-btn::after {
+    content: url("/Images/danger.png");
+    position: absolute;
+    right: -10px;
+    transform: scale(120%);
+    bottom: -10px;
+    height: 100px;
+    aspect-ratio: 1;
+}
+
+.button:hover{
+    transform: scale(103%);
 }
