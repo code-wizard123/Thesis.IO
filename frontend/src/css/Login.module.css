@@ -1,0 +1,49 @@
+.outer {
+    height: 100vh;
+    background-color: #eaeaea;
+}
+
+.form {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 25%;
+    background-color: #8237cb;
+    box-shadow:
+        2px 2.3px 5.6px -34px rgba(0, 0, 0, 0.12),
+        4.5px 5.1px 12.7px -34px rgba(0, 0, 0, 0.097),
+        7.9px 8.9px 22.1px -34px rgba(0, 0, 0, 0.083),
+        12.5px 14.1px 35.1px -34px rgba(0, 0, 0, 0.073),
+        19.3px 21.8px 54.1px -34px rgba(0, 0, 0, 0.065),
+        30.1px 34.1px 84.4px -34px rgba(0, 0, 0, 0.057),
+        50px 56.6px 140.1px -34px rgba(0, 0, 0, 0.047),
+        100px 113px 280px -34px rgba(0, 0, 0, 0.033);
+
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.form>.input {
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+    outline: none;
+
+}
+
+.formheader {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formlabel {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}

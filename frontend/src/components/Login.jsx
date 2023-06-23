@@ -1,29 +1,28 @@
-import React, { useRef } from "react";
-import { Button, Container, Form } from 'react-bootstrap'
-import { v4 as uuidv4 } from 'uuid';
+import React, {useState} from 'react';
+import LoginCSS from '../css/Login.module.css';
 
-export default function Login({ onIdSubmit }) {
-    const idRef = useRef();
+const Login = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-    function createNewId() {
-        onIdSubmit(uuidv4());
-    }
-
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        onIdSubmit(idRef.current.value);
+        console.log("Submitted Login Form");
+        console.log(username, password);
     }
 
     return (
-        <Container className="align-items-center d-flex" style={{ height: "100vh" }}>
-            <Form onSubmit={handleSubmit} className="w-100">
-                <Form.Group>
-                    <Form.Label>Enter Your Username</Form.Label>
-                    <Form.Control type="text" ref={idRef} required />
-                </Form.Group>
-                <Button type="submit">Login</Button>
-                <Button variant="secondary" onClick={createNewId}>Create New ID</Button>
-            </Form>
-        </Container>
+        <div className={LoginCSS.outer}>
+            <form className={LoginCSS.form} autoComplete='off' autoCorrect='on' onSubmit={(e) => handleSubmit(e)}>
+                <h1 className={LoginCSS.formheader}>Login</h1>
+                <label className={LoginCSS.formlabel} htmlFor='username'>Username</label>
+                <input id="username" className={LoginCSS.input} type="text" onChange={(e) => setUsername(e.target.value)}></input>
+                <label className={LoginCSS.formlabel} htmlFor='password'>Password</label>
+                <input id="password" className={LoginCSS.input} type="password" onChange={(e) => setPassword(e.target.value)}></input>
+                <button type='submit'>Submit</button>
+            </form>
+        </div>
     )
 }
+
+export default Login
