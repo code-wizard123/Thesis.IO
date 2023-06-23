@@ -8,13 +8,13 @@
     border-radius: 30px;
 }
 
-.thesis-nav{
+.thesisnav{
     height: 15%;
     background: url("/Images/heading.png");
     background-size: cover;
 }
 
-.nav-links{
+.navlinks{
     height: 100%;
     display: flex;
     align-items: center;
@@ -22,24 +22,24 @@
     padding: 0 50px 0 50px;
 }
 
-.nav-link{
+.navlink{
     font-family: 'Lato';
     font-size: 20px;
 }
 
-.nav-image{
+.navimage{
     height: 100px;
     aspect-ratio: 1;
     background: url('/Images/profile-img.png');
     background-size: cover;
 }
 
-.nav-heading{
+.navheading{
     font-size: 50px;
     font-family: 'Reem Kufi', sans-serif;
 }
 
-.main-content{
+.maincontent{
     color: black;
     height: 85%;
     display: flex;
@@ -50,7 +50,7 @@
     padding: 60px 0 0 40px;
 }
 
-.center-section{
+.centersection{
     width: 50%;
     background-color: #e2e2e2;
     height: 100%;
@@ -60,11 +60,13 @@
     width: 30%;
 }
 
-.dash-link{
+.dashlink{
     margin: 50px 0 50px 0;
 }
 
-.dash-heading{
+.dashheading{
     font-family: 'Reem Kufi';
     margin-bottom: 90px;
 }
+
+

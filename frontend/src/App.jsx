@@ -1,7 +1,5 @@
 import Chat from './components/Chat';
-import Login from './components/Login';
-import Landing from './components/landing/Landing'
-import useLocalStorage from './hooks/useLocalStorage';
+import Landing from './components/Landing'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css'
 

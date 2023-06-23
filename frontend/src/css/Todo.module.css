@@ -1,4 +1,4 @@
-.to-do-div{
+.tododiv{
     height: 100%;
 }
 
@@ -30,9 +30,11 @@
     margin-top: calc(20% - 150px);
     background-color: white;
     height: calc(70%);
+    padding: 3rem;
+    overflow-y: auto;
 }
 
-.add-task-btn::after {
+.addtaskbtn::after {
     content: url("/Images/check.png");
     position: absolute;
     right: -210px;
@@ -42,16 +44,48 @@
     aspect-ratio: 1;
 }
 
-.mark-task-btn::after {
+.deletetaskbtn::after {
     content: url("/Images/danger.png");
     position: absolute;
-    right: -10px;
+    right: -5px;
     transform: scale(120%);
-    bottom: -10px;
+    bottom: -5px;
     height: 100px;
     aspect-ratio: 1;
 }
 
 .button:hover{
     transform: scale(103%);
+}
+
+.listitem{
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background-color: #d9d9d9;
+    border-radius: 9px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-right: 120px;
+}
+
+.listitem:last-of-type{
+    margin-bottom: 0px;
+}
+
+.checktaskbtn{
+    padding-bottom: 10px;
+    border: 0;
+    background-color: green;
+    position: absolute;
+    right: 50px;
+    aspect-ratio: 1;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+.checklogo{
+    transform: translateY(-4px);
 }
