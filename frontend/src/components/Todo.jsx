@@ -1,6 +1,8 @@
 import React from 'react'
 import TodoCSS from '../css/Todo.module.css'
 import { FaCheck } from 'react-icons/fa'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 const Todo = () => {
   const handleDeleteTask = () => {
@@ -19,8 +21,22 @@ const Todo = () => {
   return (
     <div className={TodoCSS.tododiv}>
       <div className={TodoCSS.buttons}>
+        <Popup trigger={<div className={`${TodoCSS.button} ${TodoCSS.addtaskbtn}`}>Add Task</div>} modal>
+          {close => (
+            <div className={TodoCSS.modal}>
+              <button className={TodoCSS.close} onClick={close}>
+                &times;
+              </button>
+              <div className={TodoCSS.header}>Modal Title</div>
+              <div className={TodoCSS.content}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
+                commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
+                explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
+              </div>
+            </div>
+          )}
+        </Popup>
         <div className={`${TodoCSS.button} ${TodoCSS.deletetaskbtn}`} onClick={handleDeleteTask}>Delete Task</div>
-        <div className={`${TodoCSS.button} ${TodoCSS.addtaskbtn}`} onClick={handleAddTask}>Add Task</div>
       </div>
       <div className={TodoCSS.list}>
         <div className={TodoCSS.listitem}>
