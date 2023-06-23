@@ -34,18 +34,6 @@ const Todo = () => {
           <h5>22/06/2023 - <font color="red">26/06/2023</font></h5>
           <button onClick={(e) => handleDoneTask(e)} className={TodoCSS.checktaskbtn}><FaCheck className={TodoCSS.checklogo} /></button>
         </div>
-        <div className={TodoCSS.listitem}>
-          <h3>Task Name</h3>
-          <h5>22/06/2023 - 26/06/2023</h5>
-        </div>
-        <div className={TodoCSS.listitem}>
-          <h3>Task Name</h3>
-          <h5>Due On: 26/07/2023</h5>
-        </div>
-        <div className={TodoCSS.listitem}>
-          <h3>Task Name</h3>
-          <h5>Due On: 26/07/2023</h5>
-        </div>
       </div>
     </div>
   )
