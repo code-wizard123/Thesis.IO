@@ -7,8 +7,11 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Submitted Login Form");
-        console.log(username, password);
+    
+        if(username && password && username.length !== 0 && password.length.length !== 0){
+            console.log("Submitted Login Form");
+            console.log(username, password);
+        }
     }
 
     return (
