@@ -1,15 +1,25 @@
 const express = require("express");
-const app = express();
-const http = require("http");
-const { Server } = require("socket.io")
+
 const cors = require("cors");
+const bodyParser = require('body-parser')
 
-//Middleware for Resolving Connection errors
-app.use(cors());
+const app = express();
 
-//Setting up Server 
-const server = http.createServer(app)
-const io = new Server(server, {
+app.use(express.urlencoded({ extended: true }))
+app.use(cors())
+app.use(express.json())
+app.use(bodyParser.json())
+
+
+const studentroutes = require('./routes/StudentRoutes')
+const mentorroutes = require('./routes/MentorRoutes')
+
+app.use('/api/student',studentroutes)
+app.use('/api/mentor',mentorroutes)
+
+
+const server = require("http").createServer(app)
+const io = require("socket.io")(server, {
     cors: {
         origin: "http://localhost:5173",
         methods: ["GET", "POST"],

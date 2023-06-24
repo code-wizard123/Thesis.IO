@@ -15,10 +15,10 @@ const StudentLogin = () => {
             body: JSON.stringify({ email: uemail, password: upassword}),
         })
 
-        const json = await response.json();
-
+        const json = await response.json()
+        
         if (json.success) {
-            console.log("Login Success")
+            console.log("Student login success")
         }
 
         if (json.error) {

@@ -9,16 +9,16 @@ const StudentSignup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        const response = await fetch("/api/student/login", {
+        const response = await fetch("/api/student/signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email: uemail, password: upassword}),
         })
 
-        const json = await response.json();
+        const json = await response.json()
 
         if (json.success) {
-            console.log("Login Success")
+            console.log("Student signup success")
         }
 
         if (json.error) {
