@@ -15,9 +15,8 @@ client.connect((err) => {
     console.log("Connected");
 })
 
-const querytest = async () => {
-    const res = await client.query("SELECT * FROM test1");
-    console.log(res.rows)
+module.exports = {
+    query : (text , params , callback) => {
+        return client.query(text , params , callback)
+    }
 }
-
-querytest();
