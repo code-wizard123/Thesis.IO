@@ -33,7 +33,7 @@ const MentorSignup = () => {
     return (
         <div className={LoginCSS.outer}>
             <form className={LoginCSS.form} autoComplete='off' autoCorrect='on' onSubmit={(e) => handleSubmit(e)}>
-                <h1 className={LoginCSS.formheader}>Login</h1>
+                <h1 className={LoginCSS.formheader}>Mentor SignUp</h1>
                 <label className={LoginCSS.formlabel} htmlFor='username'>Email</label>
                 <input id="username" className={LoginCSS.input} type="email" onChange={(e) => setEmail(e.target.value)}></input>
                 <label className={LoginCSS.formlabel} htmlFor='password'>Password</label>

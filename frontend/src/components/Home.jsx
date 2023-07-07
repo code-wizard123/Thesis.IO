@@ -1,15 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import Navbar from './Navbar';
 
 const Home = () => {
-    const navigate = useNavigate();
-    const handleLoginClick = () => {
-        navigate('/login')
-    }
-
     return (
         <div>
-            <button onClick={handleLoginClick}>Login</button>
+           <Navbar />
         </div>
     )
 }

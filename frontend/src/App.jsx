@@ -1,6 +1,8 @@
 import Chat from './components/Chat';
-import Landing from './components/Landing'
+import StudentLanding from './components/StudentLanding'
 import Home from './components/Home'
+
+import ProtectedStudentRoutes from './Protected/ProtectedStudentRoutes';
 
 import StudentLogin from './components/StudentLogin'
 import StudentSignup from './components/StudentSignup';
@@ -8,7 +10,7 @@ import StudentSignup from './components/StudentSignup';
 import MentorLogin from './components/MentorLogin';
 import MentorSignup from './components/MentorSignup';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -17,7 +19,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Chat" element={<Chat />} />
-        <Route path="/landing" element={<Landing />} />
+        
+        <Route element={<ProtectedStudentRoutes/>}>
+          <Route path="/student/landing" element={<StudentLanding />} />
+        </Route>
 
         <Route path="/student/login" element={<StudentLogin />} />
         <Route path="/student/signup" element={<StudentSignup />} />

@@ -2,7 +2,7 @@ import React from 'react'
 import landingCSS from '../css/Landing.module.css'
 import Todo from './Todo'
 
-const Landing = () => {
+const MentorLanding = () => {
   return (
     <div className={landingCSS.outer}>
       <nav className={landingCSS.thesisnav}>
@@ -35,4 +35,4 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default MentorLanding

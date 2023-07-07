@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
 .outer {
     height: 100vh;
     background-color: #eaeaea;
+}
+
+.errordiv{
+    color: red;
+    text-shadow: rgba(0, 0, 0, 0.274) 3px 3px 4px, rgba(0, 0, 0, 0.626) 1px 1px 3px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: 300;
 }
 
 .form {
@@ -9,27 +23,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 60%;
-    width: 25%;
+    width: 29rem;
+    min-height: 35rem;
     background-color: #8237cb;
     box-shadow:
-        2px 2.3px 5.6px -34px rgba(0, 0, 0, 0.12),
-        4.5px 5.1px 12.7px -34px rgba(0, 0, 0, 0.097),
-        7.9px 8.9px 22.1px -34px rgba(0, 0, 0, 0.083),
-        12.5px 14.1px 35.1px -34px rgba(0, 0, 0, 0.073),
-        19.3px 21.8px 54.1px -34px rgba(0, 0, 0, 0.065),
-        30.1px 34.1px 84.4px -34px rgba(0, 0, 0, 0.057),
-        50px 56.6px 140.1px -34px rgba(0, 0, 0, 0.047),
-        100px 113px 280px -34px rgba(0, 0, 0, 0.033);
-
+        0.5px 0.7px 0.9px -10px rgba(0, 0, 0, 0.017),
+        1.1px 1.6px 2px -10px rgba(0, 0, 0, 0.025),
+        1.8px 2.7px 3.3px -10px rgba(0, 0, 0, 0.031),
+        2.8px 4.1px 5px -10px rgba(0, 0, 0, 0.035),
+        4px 5.9px 7.1px -10px rgba(0, 0, 0, 0.04),
+        5.7px 8.3px 10.1px -10px rgba(0, 0, 0, 0.045),
+        8px 11.8px 14.3px -10px rgba(0, 0, 0, 0.049),
+        11.7px 17.2px 20.8px -10px rgba(0, 0, 0, 0.055),
+        18px 26.4px 32.1px -10px rgba(0, 0, 0, 0.063),
+        32px 47px 57px -10px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
-    padding: 50px;
+    padding: 35px 50px 50px 50px;
 }
 
 .form>.input {
     border: none;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: transparent;
     margin-bottom: 1rem;
     border-bottom: 1px solid white;
@@ -38,12 +53,49 @@
 }
 
 .formheader {
-    font-size: 4rem;
+    text-shadow: rgba(0, 0, 0, 0.274) 3px 3px 4px, rgba(0, 0, 0, 0.626) 1px 1px 3px;
+    font-size: 3.3rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: 700;
 }
 
 .formlabel {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: 300;
+}
+
+.select {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    background: transparent;
+    font-size: 1.3rem;
+    color: white;
+    outline: none;
+    border: 1px white solid;
+    padding: 0.3rem;
+    border-radius: 5px;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.select > option{
+    background-color: #8237cb;
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: 400;
+}
+
+.submitbtn {
+    font-family: 'Reem Kufi', sans-serif;
+    font-weight: 600;
+    position: relative;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+    padding: 7px 13px 7px 13px;
 }

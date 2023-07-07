@@ -87,29 +87,28 @@ router.post('/login', async (req, res) => {
         }
 
     } catch (error) {
-        return res.status(400).json({ error: error.message })
+        return res.status(400).json({ error : error.message })
     }
 
 })
 
 module.exports = router
 
+router.get('/temp' , (req , res) => {
 
-// router.get('/temp' , (req , res) => {
-
-//     db.query('SELECT * from student' , (error , results) => {
-//         if(error){
-//             res.json(error)
-//         }
-//         else{
-//             res.json(results)
-//         }
-//     })
-// })
+    db.query('SELECT * from student' , (error , results) => {
+        if(error){
+            res.json(error)
+        }
+        else{
+            res.json(results)
+        }
+    })
+})
 
 // router.post('/temp' , (req , res) => {
 
-//     const values = [req.body.email , req.body.name]
+//     const values = [req.body.email, req.body.name]
 
 //     db.query('INSERT INTO STUDENT (name , email) VALUES ($1 , $2 )', values , (error , results) => {
 //         if(error){
