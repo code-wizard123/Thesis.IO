@@ -17,13 +17,31 @@ const createToken = (id, role) => {
     });
 }
 
+router.get('/givemeinfo/:ment_id' , async (req , res) => {
+
+    try {
+        const {ment_id} = req.params
+        
+        const query = 'SELECT * FROM mentor WHERE ment_uuid = $1';
+
+        const { rows } = await db.query(query, [ment_id]);
+        
+        res.json({success : true , info : rows[0]})
+
+    } catch (error) {
+        return res.status(400).json({ error: error.message })
+    }
+
+})
+
 router.post('/signup', async (req, res) => {
 
     let hashpass = " "
+    const values2 = [req.body.email]
 
     try {
 
-        if (!req.body.password || !req.body.email ||  !req.body.gender || !req.body.name) {
+        if (!req.body.password || !req.body.email || !req.body.gender || !req.body.name) {
             throw Error('All fields must be filled')
         }
 
@@ -38,6 +56,13 @@ router.post('/signup', async (req, res) => {
         const salt = await bcrypt.genSalt(12)
         hashpass = await bcrypt.hash(req.body.password, salt);
 
+        const query = 'SELECT * FROM MENTOR WHERE email = $1';
+        const { rows } = await db.query(query, values2);
+
+        if(rows.length !== 0)
+        {
+            throw Error('Email already in use')
+        }
 
     } catch (error) {
         return res.status(400).json({ error: error.message })
@@ -49,10 +74,13 @@ router.post('/signup', async (req, res) => {
         if (error) {
             res.status(500).json({ error: `Error in insertion : ${error}` })
         }
-        else {
-            res.json({ success: true })
-        }
     })
+
+    const query = 'SELECT * FROM MENTOR WHERE email = $1';
+
+    const { rows } = await db.query(query, values2);
+    const token = createToken(rows[0].ment_uuid, 'Mentor');
+    return res.json({ success: true, authToken: token });
 
 })
 
@@ -75,7 +103,7 @@ router.post('/login', async (req, res) => {
         }
 
         const dbhasp = rows[0].password;
-        const dbid = rows[0].std_uuid;
+        const dbid = rows[0].ment_uuid;
 
         const match = await bcrypt.compare(req.body.password, dbhasp);
 
